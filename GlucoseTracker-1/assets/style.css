@@ -1,0 +1,171 @@
+.stApp {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+/* Main header styling */
+h1 {
+    color: #10b981;
+    background: -webkit-linear-gradient(45deg, #10b981, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d1fae5;
+}
+
+/* Subheading styling */
+h2, h3 {
+    color: #1e3a29;
+    margin-top: 1.5rem;
+}
+
+/* Main metric display */
+.main-metric {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #10b981;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+}
+
+/* Glucose level color indicators */
+.glucose-normal {
+    color: #22c55e;
+    background: linear-gradient(120deg, #22c55e, #16a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glucose-high {
+    color: #ef4444;
+    background: linear-gradient(120deg, #ef4444, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glucose-low {
+    color: #eab308;
+    background: linear-gradient(120deg, #facc15, #eab308);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Card-like containers */
+div.stBlock {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border-left: 5px solid #10b981;
+}
+
+/* Metric value styling */
+div[data-testid="stMetricValue"] {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #10b981;
+}
+
+div[data-testid="stMetricLabel"] {
+    font-weight: 500;
+    color: #4b5563;
+}
+
+/* Button styling */
+.stButton button {
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #10b981, #059669);
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stButton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background-color: #f0fdf4;
+    border-right: 1px solid #a7f3d0;
+    padding: 1rem;
+}
+
+section[data-testid="stSidebar"] h2 {
+    color: #10b981;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields styling */
+div[data-baseweb="input"] {
+    border-radius: 8px;
+    border: 2px solid #d1fae5;
+}
+
+div[data-baseweb="input"]:focus-within {
+    border-color: #10b981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+/* Tables styling */
+div[data-testid="stTable"] {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+div[data-testid="stTable"] th {
+    background-color: #10b981;
+    color: white;
+    font-weight: 500;
+}
+
+/* Alert and info boxes */
+div[data-testid="stAlert"] {
+    border-radius: 8px;
+    border-left-width: 10px;
+    font-weight: 500;
+}
+
+/* Special animation for header */
+h1 {
+    position: relative;
+    overflow: hidden;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #10b981, #34d399, #a7f3d0);
+    animation: rainbow 3s ease-in-out infinite;
+    border-radius: 3px;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Enhancing focus for accessibility */
+*:focus {
+    outline: 2px solid #10b981 !important;
+    outline-offset: 2px;
+}
